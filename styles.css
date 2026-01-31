@@ -1240,6 +1240,8 @@ ul {
   flex-direction: column;
   text-align: left;
   flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 @media (min-width: 1024px) {
@@ -1258,7 +1260,8 @@ ul {
 
 
 .ops-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .ops-card-img {
