@@ -189,7 +189,6 @@ ul {
   z-index: 1001;
   position: relative;
   order: 3;
-  /* Mobile: after logo and before (hidden) nav-cta */
 }
 
 .hamburger span {
@@ -450,12 +449,10 @@ ul {
     align-items: center;
     z-index: 1001;
     order: 2;
-    /* CTA comes before hamburger */
   }
 
   .hamburger {
     order: 3;
-    /* Hamburger is last (rightmost) */
   }
 
   .nav-logo img {
@@ -464,11 +461,9 @@ ul {
 
   .hero-content {
     margin: 0 auto;
-    /* Center the content */
     max-width: 680px;
     gap: 24px;
     text-align: center;
-    /* Center text */
   }
 
   .hero-title {
@@ -488,7 +483,6 @@ ul {
     gap: 20px;
     margin-top: 12px;
     justify-content: center;
-    /* Center buttons */
   }
 
   .hero-actions .btn {
@@ -564,11 +558,9 @@ ul {
 
   .hero-content {
     margin-left: 64px;
-    /* Left aligned on desktop */
     margin-right: auto;
     gap: 24px;
     text-align: left;
-    /* Left aligned text */
     max-width: none;
   }
 
@@ -589,7 +581,6 @@ ul {
     gap: 64px;
     margin-top: 16px;
     justify-content: flex-start;
-    /* Left aligned buttons */
   }
 
   .hero-actions .btn {
@@ -669,5 +660,71 @@ ul {
 @media (min-width: 1024px) {
   .features-wrapper {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================
+   TICKER / GREEN STRIP
+========================= */
+
+.ticker-section {
+  width: 100%;
+  height: 61px;
+  background-color: #578C57;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track span {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.ticker-track img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* Desktop: no animation, centered static content */
+@media (min-width: 1024px) {
+  .ticker-track {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 120px;
+    animation: none;
+  }
+
+  /* Hide duplicate content on desktop (keep first Grading of duplicate set) */
+  .ticker-track span:nth-child(n+12),
+  .ticker-track img:nth-child(n+11) {
+    display: none;
   }
 }
