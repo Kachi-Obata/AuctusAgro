@@ -988,25 +988,36 @@ ul {
   text-align: left;
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
 .card-icon-circle {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   background-color: #EEF9E6;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  flex-shrink: 0;
 }
 
 .card-icon-circle img {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
 }
 
 .card-title {
   color: #2C2B2B;
-  margin-bottom: 12px;
+  width: 191px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 .card-description {
