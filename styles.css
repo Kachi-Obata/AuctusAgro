@@ -916,3 +916,131 @@ ul {
     height: 200px;
   }
 }
+
+/* =========================
+   WHO WE ARE SECTION
+========================= */
+.who-we-are {
+  background-color: #EAEAEA;
+  padding: 120px 16px;
+}
+
+.who-we-are-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.who-we-are-btn {
+  display: inline-flex;
+  width: 240px;
+  height: 60px;
+  padding: 10px 40px;
+  background-color: #EEF9E6;
+  color: #045304;
+  font-family: var(--font-heading);
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+  border: 1px solid #B1CAB1;
+}
+
+.who-we-are-btn h4 {
+  font-size: 25px;
+  /* h4 semibold based on previous styles */
+  font-weight: 600;
+  line-height: 1;
+}
+
+.who-title {
+  color: #2C2B2B;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+
+.who-subtext {
+  color: #2C2B2B;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.who-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.who-card {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: var(--radius);
+  flex: 1 1 340px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.card-icon-circle {
+  width: 56px;
+  height: 56px;
+  background-color: #EEF9E6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.card-icon-circle img {
+  width: 56px;
+  height: 56px;
+}
+
+.card-title {
+  color: #2C2B2B;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  color: #2C2B2B;
+  margin-bottom: 24px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-list span {
+  color: #2C2B2B;
+}
+
+@media (min-width: 1024px) {
+  .who-cards {
+    justify-content: space-between;
+    gap: 0;
+    /* User said 'space between each card is auto', achieved with space-between and no fixed gap */
+  }
+}
