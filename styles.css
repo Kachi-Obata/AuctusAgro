@@ -793,11 +793,178 @@ ul {
   flex-shrink: 0;
 }
 
-.doc-text h4 {
-  font-size: 16px;
-  color: var(--text);
-  margin-bottom: 4px;
+
+/* =========================
+   PRODUCTS PAGE HERO
+========================= */
+.prod-hero-section {
+  position: relative;
+  height: 400px;
+  /* Adjust height as needed for visual balance */
+  background-image: url("images/factoryworkers2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.prod-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Slightly darker for text readability */
+}
+
+.prod-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.prod-hero-title {
+  margin-bottom: 16px;
+}
+
+.prod-hero-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* =========================
+   PRIMARY GRADES SECTION
+========================= */
+.grades-section {
+  padding: 80px 16px;
+  background: var(--bg);
+}
+
+.grades-container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.grades-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px auto;
+}
+
+.grades-header h2 {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.grade-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grade-card h3 {
+  color: var(--text);
+}
+
+.grade-card p {
+  color: #525252;
+}
+
+/* Grades Images */
+.grades-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.grades-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+@media (min-width: 768px) {
+  .grades-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grades-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================
+   COMMERCIAL SPECS SECTION
+========================= */
+.specs-section {
+  padding: 80px 16px;
+  background: #F2F2F2;
+  /* Light grey background */
+}
+
+.specs-container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.specs-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px auto;
+}
+
+.specs-header h2 {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.spec-card {
+  background: #FFFFFF;
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Optional: subtle shadow for elevation against grey bg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.spec-card h4 {
+  color: var(--text);
+}
+
+.spec-card p {
+  color: #525252;
+}
+
+@media (min-width: 768px) {
+  .specs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 .doc-text p {
   font-size: 13px;
@@ -1810,4 +1977,93 @@ ul {
   .contact-info li {
     justify-content: center;
   }
+}
+
+/* =========================
+   WHAT BUYERS RECEIVE SECTION
+========================= */
+.buyers-receive-section {
+  padding: 80px 16px;
+  background: var(--bg);
+}
+
+.buyers-container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.buyers-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px auto;
+}
+
+.buyers-header h2 {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* Images Row (4 columns) */
+.buyers-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.buyers-img {
+  width: 100%;
+  aspect-ratio: 295 / 342;
+  /* Matches the vertical rectangle look in the design/crop */
+  height: auto;
+  /* Allow height to adjust based on aspect ratio */
+  object-fit: cover;
+  border-radius: 20px;
+  /* Looks like a larger radius in the screenshot */
+}
+
+@media (min-width: 1024px) {
+  .buyers-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Info Cards Row (3 columns) */
+.buyers-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.buyer-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buyer-card h3 {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.buyer-card p {
+  color: #525252;
+  line-height: 150%;
+}
+
+@media (min-width: 768px) {
+  .buyers-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* FAQ Center Header Override for Products Page */
+.faq-header-center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px auto;
 }
