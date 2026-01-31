@@ -1825,7 +1825,7 @@ ul {
 
 .faq-subtext {
   margin-bottom: 40px;
-  color: #525252;
+  color: #2C2B2B;
 }
 
 .faq-list {
@@ -2066,4 +2066,288 @@ ul {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 48px auto;
+}
+
+/* =========================
+   PROCESSING PAGE STYLES
+========================= */
+
+/* Hero */
+.proc-hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url("images/ProcessingHero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.proc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.proc-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.proc-hero-title {
+  margin-bottom: 16px;
+}
+
+.proc-hero-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Content Container */
+.proc-content-section {
+  padding: 80px 16px;
+  background: var(--bg);
+}
+
+.proc-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Processing Cards */
+.proc-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  /* Matching the rounded look */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .proc-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    /* Ensure equal height */
+  }
+
+  /* Reverse modifier for image left / text right */
+  .proc-card.reverse .proc-card-image {
+    order: -1;
+    /* Move image to left */
+  }
+}
+
+.proc-card-content {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.proc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.proc-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  /* background-color: #F0FDF4; Optional: layout usually has bg in SVG or icon itself */
+  /* border-radius: 50%; */
+}
+
+.proc-card-image {
+  height: 100%;
+  min-height: 350px;
+}
+
+.proc-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proc-list li {
+  display: flex;
+  align-items: flex-start;
+  /* Align checkmark with top of text line */
+  gap: 12px;
+}
+
+.proc-list li .check-icon {
+  margin-top: 2px;
+  /* Slight optical adjustment */
+}
+
+/* Inspection Text Card */
+.proc-text-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 60px;
+  text-align: left;
+}
+
+.proc-text-card h2 {
+  margin-bottom: 16px;
+  color: var(--text);
+  font-size: 24px;
+}
+
+.proc-text-card p {
+  color: #525252;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 900px;
+}
+
+/* =========================
+   EXPORT & LOGISTICS PAGE
+========================= */
+
+/* Hero */
+.export-hero-section {
+  position: relative;
+  height: 480px;
+  /* Taller hero as seen in reference */
+  background-image: url("images/exportlogisticsbanner.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.export-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.export-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.export-hero-title {
+  margin-bottom: 24px;
+}
+
+.export-hero-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 1;
+  font-size: 20px;
+  /* Slightly larger subtitle text */
+  line-height: 150%;
+}
+
+/* Content Container */
+.export-content-section {
+  padding: 100px 16px;
+  background: var(--bg);
+}
+
+.export-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Incoterms Grid */
+.export-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .export-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.export-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 238px;
+  /* Matches user request 400x238 */
+}
+
+.export-card h3 {
+  color: var(--text);
+  font-size: 24px;
+}
+
+.export-card p {
+  color: #2C2B2B;
+  line-height: 160%;
+  font-size: 18px;
+  /* Body 1 */
+}
+
+/* Note Card */
+.export-note-card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 60px;
+  text-align: left;
+}
+
+.export-note-card p {
+  color: #2C2B2B;
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 900px;
+}
+
+/* Large Cashew Banner */
+.export-cashew-banner {
+  width: 100%;
+  height: 500px;
+  /* Taller banner */
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.export-cashew-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
