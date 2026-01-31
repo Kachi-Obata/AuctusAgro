@@ -1108,11 +1108,14 @@ ul {
 
 /* Image Grid */
 .what-image-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   width: 100%;
+}
+
+.what-img-group.large {
+  grid-column: span 2;
 }
 
 .what-img-group img {
@@ -1125,9 +1128,25 @@ ul {
 .what-img-group.stacked {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  /* Calculated to align with group total height */
+  gap: 16px;
 }
+
+/* Adjustments for taller images on mobile to prevent squishing */
+@media (max-width: 1023px) {
+  .what-img-group.large img {
+    height: 300px;
+  }
+
+  .what-img-group.stacked img {
+    height: 150px;
+  }
+
+  .what-img-group.medium img {
+    height: 316px;
+    /* 150*2 + 16 gap */
+  }
+}
+
 
 /* Desktop sizing and layout */
 @media (min-width: 1024px) {
@@ -1135,7 +1154,11 @@ ul {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    gap: 24px;
+    display: flex;
+    /* Override grid on desktop for exact flex control */
   }
+
 
   .what-img-group.large {
     width: 608px;
